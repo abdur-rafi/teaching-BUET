@@ -20,6 +20,7 @@ int main() {
     int quotient = a / b;
     int remainder = a % b;
     int negative = -a;
+    
 
     printf("Sum: %d\n", sum);
     printf("Difference: %d\n", difference);
@@ -27,6 +28,11 @@ int main() {
     printf("Quotient: %d\n", quotient);
     printf("Remainder: %d\n", remainder);
     printf("Unary Negation: %d\n", negative);
+
+    float div = (float)a / b;
+
+    printf("Float Division: %.2f\n", div);
+
 
     float x = 10.5, y = 3.2;
     float float_sum = x + y;
