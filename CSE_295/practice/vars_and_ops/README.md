@@ -8,7 +8,7 @@
     - Input: `7`  
       Output: `0`  
 
-2. **Extract the last digit of a number**  
+2. **Extract the second last digit of a number**  
     Write a program to extract and print the second digit of a given number.  
     **Sample Input/Output**:  
     - Input: `123`  
