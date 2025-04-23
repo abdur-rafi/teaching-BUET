@@ -49,9 +49,9 @@
       Output: `1100`  
 
 7. **Check if a number is a palindrome**  
-  Write a program to check if a given 5 digit integer is a palindrome. Print `1` if it is a palindrome and `0` otherwise.  
-  **Sample Input/Output**:  
-  - Input: `12135`  
-    Output: `0`  
-  - Input: `12121`  
-    Output: `1`  
+    Write a program to check if a given 5 digit integer is a palindrome. Print `1` if it is a palindrome and `0` otherwise.  
+    **Sample Input/Output**:  
+    - Input: `12135`  
+      Output: `0`  
+    - Input: `12121`  
+      Output: `1`  
