@@ -12,6 +12,8 @@
 [Code](./variables/).[Slide](https://docs.google.com/presentation/d/1qYLthoMqjaD4CBdUid5w_x8jylcaG7AX1t8YucCIxu8/edit?usp=sharing)  
 ### Lecture 3: Operators  
 [Code](./operators/).[Slide](https://docs.google.com/presentation/d/1qYLthoMqjaD4CBdUid5w_x8jylcaG7AX1t8YucCIxu8/edit?usp=sharing)  
+### Lecture 4: Operator precedence, prefix & postfix increment, Control structure (if, if else)
+[Operator related code](./operators/), [Conditional statements code](./conditional/), [slide](https://docs.google.com/presentation/d/1mcBhrPgwE0_MojRC1GcmfDMaf_aYk1t1dE8_zY_8Kt0/edit?usp=sharing)
 
 ---
 
