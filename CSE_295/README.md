@@ -24,3 +24,4 @@
 ## Practice Problems
 - [Variables and operators](./practice/vars_and_ops/README.md)
 - [Conditional statements](./practice/conditional/README.md)
+- [Loop](./practice/loops/README.md)
