@@ -84,22 +84,6 @@ n = 30
 Not Prime
 ```
 
-## Pascal's Triangle
-Write a program that takes an integer input `n` and prints the first `n` rows of Pascal's Triangle. For example, if `n = 5`, the output should have 5 rows.
-
-**Sample Input:**
-```
-n = 5
-```
-
-**Sample Output:**
-```
-1
-1 1
-1 2 1
-1 3 3 1
-1 4 6 4 1
-```
 
 ## Armstrong Numbers (3 Digits)
 Write a program that finds and prints all 3-digit Armstrong numbers. An Armstrong number is a number such that the sum of its digits raised to the power of 3 equals the number itself.
@@ -161,4 +145,87 @@ n = 5
 *****
 *****
 ```
+## Reverse a Number
+Write a program that takes an integer input `n` and prints the number in reverse order.
 
+**Sample Input:**
+```
+n = 1234
+```
+
+**Sample Output:**
+```
+4321
+```
+
+## Palindrome Checker
+Write a program that takes an integer input `n` and checks if it is a palindrome.
+
+**Sample Input:**
+```
+n = 121
+```
+
+**Sample Output:**
+```
+Palindrome
+```
+
+**Sample Input:**
+```
+n = 123
+```
+
+**Sample Output:**
+```
+Not Palindrome
+```
+
+## Perfect Number Checker
+Write a program that takes an integer input `n` and checks if it is a perfect number. A perfect number is a number that is equal to the sum of its proper divisors (excluding itself).
+
+**Sample Input:**
+```
+n = 28
+```
+
+**Sample Output:**
+```
+Perfect Number
+```
+
+**Sample Input:**
+```
+n = 12
+```
+
+**Sample Output:**
+```
+Not a Perfect Number
+```
+
+## GCD of Two Numbers
+Write a program that takes two integer inputs `a` and `b` and prints their greatest common divisor (GCD).
+
+**Sample Input:**
+```
+a = 56, b = 98
+```
+
+**Sample Output:**
+```
+14
+```
+
+## LCM of Two Numbers
+Write a program that takes two integer inputs `a` and `b` and prints their least common multiple (LCM).
+
+**Sample Input:**
+```
+a = 4, b = 6
+```
+
+**Sample Output:**
+```
+12
+```
