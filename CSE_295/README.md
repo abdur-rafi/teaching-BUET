@@ -18,6 +18,13 @@
 [Code](./conditional/).[Slide](https://docs.google.com/presentation/d/1mcBhrPgwE0_MojRC1GcmfDMaf_aYk1t1dE8_zY_8Kt0/edit?usp=sharing)  
 ### Lecture 6: Switch statement, Short circuit evaluation 
 [Code](./conditional/).[Slide](https://docs.google.com/presentation/d/1mcBhrPgwE0_MojRC1GcmfDMaf_aYk1t1dE8_zY_8Kt0/edit?usp=sharing)  
+### Lecture 7: While, do While loop
+[Code](./loop/).[Slide](https://docs.google.com/presentation/d/1mcBhrPgwE0_MojRC1GcmfDMaf_aYk1t1dE8_zY_8Kt0/edit?usp=sharing)  
+### Lecture 8: For Loop
+[Code](./loop/).[Slide](https://docs.google.com/presentation/d/1mcBhrPgwE0_MojRC1GcmfDMaf_aYk1t1dE8_zY_8Kt0/edit?usp=sharing)  
+### Lecture 9: Break and continue
+[Code](./loop/).[Slide](https://docs.google.com/presentation/d/1mcBhrPgwE0_MojRC1GcmfDMaf_aYk1t1dE8_zY_8Kt0/edit?usp=sharing)  
+
 
 ---
 
