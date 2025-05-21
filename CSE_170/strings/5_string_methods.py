@@ -26,7 +26,7 @@ result_title = text.title()
 print("title():", result_title)
 
 # split() - Splits the string into a list
-result_split = text.split()
+result_split = text.split(sep=" ")
 print("split():", result_split)
 
 # join() - Joins elements of a list into a string
