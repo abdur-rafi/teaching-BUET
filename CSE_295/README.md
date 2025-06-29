@@ -25,6 +25,13 @@
 ### Lecture 9: Break and continue
 [Code](./loop/).[Slide](https://docs.google.com/presentation/d/1mcBhrPgwE0_MojRC1GcmfDMaf_aYk1t1dE8_zY_8Kt0/edit?usp=sharing)  
 
+### Lecture 10-12: Multi-dimensional arrays, Matrix operations using 2d matrix
+[Code](./multi-dimensional-array/).
+Recordings([1](https://youtu.be/gvNwoS1vJXw), [2](https://youtu.be/s0-CHQ77BQ8), [3](https://youtu.be/avPldF8nhFo)).
+
+
+### Lecture 13-16: Struct, Union, Enum, Bitfield 
+[Code](./structure_union_enum_bitfield/) 
 
 ---
 
@@ -32,3 +39,4 @@
 - [Variables and operators](./practice/vars_and_ops/README.md)
 - [Conditional statements](./practice/conditional/README.md)
 - [Loop](./practice/loops/README.md)
+- [Struct, Union, Enum](./structure_union_enum_bitfield/practice_problems/README.md)
