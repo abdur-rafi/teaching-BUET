@@ -39,4 +39,4 @@ Recordings([1](https://youtu.be/gvNwoS1vJXw), [2](https://youtu.be/s0-CHQ77BQ8),
 - [Variables and operators](./practice/vars_and_ops/README.md)
 - [Conditional statements](./practice/conditional/README.md)
 - [Loop](./practice/loops/README.md)
-- [Struct, Union, Enum](./structure_union_enum_bitfield/practice_problems/README.md)
+- [Struct, Union, Enum](./practice/structure_union_enum/README.md)
