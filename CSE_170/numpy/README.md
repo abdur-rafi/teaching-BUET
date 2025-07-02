@@ -1,4 +1,4 @@
-# Lecture: Introduction to NumPy for Non-CS Background Students
+# Lecture: Introduction to NumPy
 
 ## 1. Motivation & Overview
 - **Why use NumPy?**
