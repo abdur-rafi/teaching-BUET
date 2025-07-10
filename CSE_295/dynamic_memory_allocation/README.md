@@ -148,6 +148,7 @@ Suppose you want to store names of students:
 ```c
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 struct Student {
     char *name;
@@ -158,7 +159,10 @@ int main() {
     struct Student s;
     s.name = (char*)malloc(50 * sizeof(char)); // up to 49 chars
     printf("Enter name: ");
-    scanf("%49s", s.name);
+    fgets(s.name, 50, stdin); // safer than scanf for strings
+    // Remove newline if present
+    int len = strlen(s.name);
+    if (len > 0 && s.name[len-1] == '\n') s.name[len-1] = '\0';
     s.id = 123;
     printf("Name: %s, ID: %d\n", s.name, s.id);
     free(s.name);
@@ -219,6 +223,45 @@ for (int i = 0; i < n; i++) {
   for (int i = 0; i < n; i++) free(names[i]);
   free(names);
   ```
+
+---
+
+## Example: Allocating Memory for Array of Structures
+You can also use dynamic memory allocation to create an array of structures. For example, to store information about several students:
+
+1. Decide how many students you want to store (let's say `n`).
+2. Allocate memory for an array of `n` structures using `malloc`.
+3. Access each structure using array notation (e.g., `students[i]`).
+4. Free the memory when done.
+
+**Code Example:**
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Student {
+    char name[50];
+    int id;
+};
+
+int main() {
+    int n;
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+    struct Student *students = malloc(n * sizeof(struct Student));
+    for (int i = 0; i < n; i++) {
+        printf("Enter name for student %d: ", i+1);
+        scanf("%s", students[i].name);
+        printf("Enter id for student %d: ", i+1);
+        scanf("%d", &students[i].id);
+    }
+    printf("\nStudent list:\n");
+    for (int i = 0; i < n; i++)
+        printf("Name: %s, ID: %d\n", students[i].name, students[i].id);
+    free(students);
+    return 0;
+}
+```
 
 ---
 
