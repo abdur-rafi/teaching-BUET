@@ -50,6 +50,7 @@ int main() {
     return 0;
 }
 ```
+**Note:** You can also access array elements using pointer arithmetic: `*(arr + i)` instead of `arr[i]`. For example, in the loop: `for (int i = 0; i < 5; i++) *(arr + i) = i + 1;` and to print: `printf("First element: %d\n", *p);`
 
 ---
 
@@ -94,6 +95,9 @@ int main() {
     return 0;
 }
 ```
+**Note:** You can use pointer arithmetic instead of indexing:
+- To set all to 1: `for (int i = 0; i < n; i++) *(arr + i) = 1;`
+- To print: `printf("First: %d, Last: %d\n", *arr, *(arr + n - 1));`
 
 ---
 
@@ -121,6 +125,9 @@ int main() {
     return 0;
 }
 ```
+**Note:** For 2D arrays allocated this way, you can use pointer arithmetic:
+- To assign: `*(*(mat + i) + j) = i + j;`
+- To print: `printf("%d ", *(*(mat + i) + j));`
 
 ---
 
@@ -140,6 +147,7 @@ for (int i = 0; i < rows; i++)
   for (int i = 0; i < rows; i++) free(mat[i]);
   free(mat);
   ```
+**Note:** You can also access elements as `*(*(mat + i) + j)` using pointer arithmetic.
 
 ---
 
@@ -169,6 +177,7 @@ int main() {
     return 0;
 }
 ```
+**Note:** You can access the name using pointer arithmetic: `*(s.name + i)` gives the i-th character of the name.
 
 ---
 
@@ -204,6 +213,9 @@ int main() {
     return 0;
 }
 ```
+**Note:** You can use pointer arithmetic for string arrays:
+- To access the j-th character of the i-th name: `*(*(names + i) + j)`
+- To copy: use `strcpy(*(names + i), temp);`
 
 ## How String Array Allocation Works
 When you store strings using dynamic memory:
@@ -223,6 +235,7 @@ for (int i = 0; i < n; i++) {
   for (int i = 0; i < n; i++) free(names[i]);
   free(names);
   ```
+**Note:** You can access the j-th character of the i-th name as `*(*(names + i) + j)`.
 
 ---
 
@@ -262,6 +275,7 @@ int main() {
     return 0;
 }
 ```
+**Note:** You can use pointer arithmetic to access the i-th structure: `(*(students + i)).name` or `(students + i)->name`. For example, `scanf("%s", (students + i)->name);` and `printf("Name: %s, ID: %d\n", (students + i)->name, (students + i)->id);`
 
 ---
 
