@@ -286,13 +286,13 @@ plt.title('Original Grayscale Image')
 plt.show()
 
 # Invert the image (negative)
-inverted = 255 - image
+inverted = 1. - image
 plt.imshow(inverted, cmap='gray')
 plt.title('Inverted Grayscale Image')
 plt.show()
 
 # Thresholding: Make all pixels above 128 white, below 128 black
-thresholded = (image > 128) * 255
+thresholded = (image > .5) * 1
 plt.imshow(thresholded, cmap='gray')
 plt.title('Thresholded Grayscale Image')
 plt.show()
@@ -322,62 +322,40 @@ plt.title('Transposed Grayscale Image')
 plt.show()
 ```
 
-**RGB Image Example:**
-```python
-import numpy as np
-import matplotlib.pyplot as plt
 
-# Load an RGB image
-image = plt.imread('rgb_image.png')  # Use a PNG or JPG file
-print('Image shape:', image.shape)  # (height, width, 3)
+## 9. Practice Problems
 
-# Show the original image
-plt.imshow(image)
-plt.title('Original RGB Image')
-plt.show()
+1. **Given a 4x4 matrix:**
+    ```python
+    matrix = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]])
+    ```
+    Perform the following operations (using numpy functions):
+    - Print the maximum and minimum values in the matrix.
+    - Print the average of each row and each column.
+    - Print the transpose of the matrix.
+    - Print the inverse of the matrix (if it exists).
+    - Print the determinant of the matrix.
+    - Print the adjoint of the matrix.
+    - Print the Primary diagonal elements.
+    - Print the Secondary diagonal elements.
+    - Create a new matrix with only the secondary diagonal elements of the original matrix.
+    - Create a new matrix with the primary diagonal elements set to 0.
+    - Create a new matrix where in each row, only the elements which are greater than the average of that row are kept, and others are set to 0.
+    - Create a new matrix containing the upper triangular part of the original matrix (including the diagonal).
+    - Create a new matrix containing the lower triangular part of the original matrix (including the diagonal).
+    - Create a new matrix which should be symmetric with respect to the main diagonal and should contain the elements of the original matrix in the upper triangular part. 
+    - Create a new matrix which should be symmetric with respect to the secondary diagonal and should contain the elements of the original matrix in the lower triangular part.
+    - Replace all even numbers in the matrix with 0.
 
-# Convert to grayscale (simple average method)
-grayscale = np.mean(image, axis=2)
-plt.imshow(grayscale, cmap='gray')
-plt.title('Converted to Grayscale')
-plt.show()
 
-# Increase brightness
-brighter = np.clip(image + 50, 0, 255)
-plt.imshow(brighter.astype(np.uint8))
-plt.title('Brighter RGB Image')
-plt.show()
 
-# Extract the red channel
-red_channel = image[:, :, 0]
-plt.imshow(red_channel, cmap='Reds')
-plt.title('Red Channel')
-plt.show()
 
-# Crop the image (center 100x100 region)
-h, w, _ = image.shape
-center_crop = image[h//2-50:h//2+50, w//2-50:w//2+50]
-plt.imshow(center_crop.astype(np.uint8))
-plt.title('Center Cropped RGB Image')
-plt.show()
+## 10. Image Manipulation Practice Problems
 
-# Flip the image vertically
-flipped_v = np.flipud(image)
-plt.imshow(flipped_v.astype(np.uint8))
-plt.title('Vertically Flipped RGB Image')
-plt.show()
+Try these image manipulation problems using NumPy and matplotlib:
 
-# Flip the image horizontally
-flipped_h = np.fliplr(image)
-plt.imshow(flipped_h.astype(np.uint8))
-plt.title('Horizontally Flipped RGB Image')
-plt.show()
+1. Load the grayscale image, transpose the array and display it.
+2. Load the grayscale image, find the index of the maximum pixel value.
+3. Load the grayscale image, move the top half of the image to the bottom half and the bottom half to the top half, and display the result.
 
-# Transpose the image (swap rows and columns)
-transposed = np.transpose(image, (1, 0, 2))
-plt.imshow(transposed.astype(np.uint8))
-plt.title('Transposed RGB Image')
-plt.show()
-```
-- You can try these operations with your own images by replacing the file names.
 
