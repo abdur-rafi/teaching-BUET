@@ -133,7 +133,7 @@ for (int i = 0; i < rows; i++)
 ```
 - `mat` is a pointer to an array of pointers. Each `mat[i]` is a pointer to a row (an array of `int`).
 - First, you allocate memory for the array of row pointers.
-- Then, for each row, you allocate memory for the actual data (the columns).
+- Then, for each row, you allocate memory for that row.
 - This way, you can access elements as `mat[i][j]`.
 - Don't forget to free each row and then the array of pointers:
   ```c
