@@ -305,7 +305,4 @@ When you use `malloc` (or similar functions), the memory is taken from the heap 
 **Summary:**
 > Freeing memory is your responsibility in C. Not freeing memory wastes resources and can cause your program to misbehave. Never use memory after it has been freed.
 
----
 
-**Summary:**
-Dynamic memory allocation is essential for flexible programs. Practice with arrays, 2D arrays, and structures to get comfortable.
