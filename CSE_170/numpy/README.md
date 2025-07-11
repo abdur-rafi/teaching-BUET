@@ -344,11 +344,83 @@ plt.show()
     - Create a new matrix containing the upper triangular part of the original matrix (including the diagonal).
     - Create a new matrix containing the lower triangular part of the original matrix (including the diagonal).
     - Create a new matrix which should be symmetric with respect to the main diagonal and should contain the elements of the original matrix in the upper triangular part. 
-    - Create a new matrix which should be symmetric with respect to the secondary diagonal and should contain the elements of the original matrix in the lower triangular part.
     - Replace all even numbers in the matrix with 0.
 
 
 
+
+## 9a. Solutions to Practice Problems
+
+Below are NumPy code snippets for each matrix operation in the practice problems:
+
+```python
+import numpy as np
+
+matrix = np.array([[1, 2, 3, 4],
+                   [5, 6, 7, 8],
+                   [9, 10, 11, 12],
+                   [13, 14, 15, 16]])
+
+# 1. Maximum and minimum values
+print('Max:', np.max(matrix))
+print('Min:', np.min(matrix))
+
+# 2. Average of each row and column
+print('Row averages:', np.mean(matrix, axis=1))
+print('Column averages:', np.mean(matrix, axis=0))
+
+# 3. Transpose
+print('Transpose:\n', matrix.T)
+
+# 4. Inverse (if exists)
+try:
+    print('Inverse:\n', np.linalg.inv(matrix))
+except np.linalg.LinAlgError:
+    print('Inverse does not exist.')
+
+# 5. Determinant
+print('Determinant:', np.linalg.det(matrix))
+
+# 6. Adjoint
+adjoint = np.linalg.inv(matrix).T * np.linalg.det(matrix)
+print('Adjoint:\n', adjoint)
+
+# 7. Primary diagonal elements
+print('Primary diagonal:', np.diag(matrix))
+
+# 8. Secondary diagonal elements
+print('Secondary diagonal:', np.diag(np.fliplr(matrix)))
+
+# 9. Matrix with only secondary diagonal elements
+sec_diag = np.zeros_like(matrix)
+np.fill_diagonal(np.fliplr(sec_diag), np.diag(np.fliplr(matrix)))
+print('Secondary diagonal matrix:\n', sec_diag)
+
+# 10. Matrix with primary diagonal set to 0
+mat_no_diag = matrix.copy()
+np.fill_diagonal(mat_no_diag, 0)
+print('Primary diagonal set to 0:\n', mat_no_diag)
+
+# 11. Elements greater than row average kept, others set to 0
+row_avg = np.mean(matrix, axis=1, keepdims=True)
+gt_avg = np.where(matrix > row_avg, matrix, 0)
+print('Elements > row avg:\n', gt_avg)
+
+# 12. Upper triangular part (including diagonal)
+print('Upper triangular:\n', np.triu(matrix))
+
+# 13. Lower triangular part (including diagonal)
+print('Lower triangular:\n', np.tril(matrix))
+
+# 14. Symmetric w.r.t. main diagonal, upper part filled
+sym_main = np.triu(matrix) + np.triu(matrix, 1).T
+print('Symmetric (main diagonal, upper part):\n', sym_main)
+
+
+# 15. Replace all even numbers with 0
+even_zero = np.where(matrix % 2 == 0, 0, matrix)
+print('Even numbers replaced with 0:\n', even_zero)
+```
 
 ## 10. Image Manipulation Practice Problems
 
@@ -357,5 +429,38 @@ Try these image manipulation problems using NumPy and matplotlib:
 1. Load the grayscale image, transpose the array and display it.
 2. Load the grayscale image, find the index of the maximum pixel value.
 3. Load the grayscale image, move the top half of the image to the bottom half and the bottom half to the top half, and display the result.
+
+## 10a. Solutions to Image Manipulation Practice Problems
+
+Below are NumPy code snippets for each image manipulation problem:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load the grayscale image
+image = plt.imread('grayscale.png')  # Use the correct filename if different
+print('Image shape:', image.shape)
+
+# 1. Transpose the array and display it
+transposed = np.transpose(image)
+plt.imshow(transposed, cmap='gray')
+plt.title('Transposed Grayscale Image')
+plt.show()
+
+# 2. Find the index of the maximum pixel value (2D pixel coordinate)
+max_idx = np.unravel_index(np.argmax(image), image.shape)  # (row, column)
+print('Index of maximum pixel value (row, column):', max_idx)
+
+# 3. Move the top half to the bottom and the bottom half to the top, then display
+h = image.shape[0] // 2
+swapped = image.copy()
+swapped[:h] = image[h:]
+swapped[h:] = image[:h]
+plt.imshow(swapped, cmap='gray')
+plt.title('Top/Bottom Halves Swapped')
+plt.show()
+```
+
 
 
