@@ -384,35 +384,24 @@ print('Determinant:', np.linalg.det(matrix))
 adjoint = np.linalg.inv(matrix).T * np.linalg.det(matrix)
 print('Adjoint:\n', adjoint)
 
-# 7. Primary diagonal elements
+# 7. Primary diagonal elements (matrix must be square)
 print('Primary diagonal:', np.diag(matrix))
-
-# 8. Secondary diagonal elements
+# 8. Secondary diagonal elements (matrix must be square)
 print('Secondary diagonal:', np.diag(np.fliplr(matrix)))
-
-# 9. Matrix with only secondary diagonal elements
-sec_diag = np.zeros_like(matrix)
-np.fill_diagonal(np.fliplr(sec_diag), np.diag(np.fliplr(matrix)))
-print('Secondary diagonal matrix:\n', sec_diag)
-
-# 10. Matrix with primary diagonal set to 0
-mat_no_diag = matrix.copy()
-np.fill_diagonal(mat_no_diag, 0)
+# 9. Matrix with only secondary diagonal elements (matrix must be square)
+secondary_diag_matrix = matrix * np.fliplr(np.eye(matrix.shape[0]))
+print('Secondary diagonal matrix:\n', secondary_diag_matrix)
+# 10. Matrix with primary diagonal set to 0 (matrix must be square)
+mat_no_diag = matrix * (1 - np.eye(matrix.shape[0]))
 print('Primary diagonal set to 0:\n', mat_no_diag)
-
 # 11. Elements greater than row average kept, others set to 0
 row_avg = np.mean(matrix, axis=1, keepdims=True)
 gt_avg = np.where(matrix > row_avg, matrix, 0)
 print('Elements > row avg:\n', gt_avg)
-
 # 12. Upper triangular part (including diagonal)
 print('Upper triangular:\n', np.triu(matrix))
-
 # 13. Lower triangular part (including diagonal)
 print('Lower triangular:\n', np.tril(matrix))
-
-
-
 # 14. Replace all even numbers with 0
 even_zero = np.where(matrix % 2 == 0, 0, matrix)
 print('Even numbers replaced with 0:\n', even_zero)
