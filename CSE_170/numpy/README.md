@@ -343,7 +343,6 @@ plt.show()
     - Create a new matrix where in each row, only the elements which are greater than the average of that row are kept, and others are set to 0.
     - Create a new matrix containing the upper triangular part of the original matrix (including the diagonal).
     - Create a new matrix containing the lower triangular part of the original matrix (including the diagonal).
-    - Create a new matrix which should be symmetric with respect to the main diagonal and should contain the elements of the original matrix in the upper triangular part. 
     - Replace all even numbers in the matrix with 0.
 
 
@@ -412,12 +411,9 @@ print('Upper triangular:\n', np.triu(matrix))
 # 13. Lower triangular part (including diagonal)
 print('Lower triangular:\n', np.tril(matrix))
 
-# 14. Symmetric w.r.t. main diagonal, upper part filled
-sym_main = np.triu(matrix) + np.triu(matrix, 1).T
-print('Symmetric (main diagonal, upper part):\n', sym_main)
 
 
-# 15. Replace all even numbers with 0
+# 14. Replace all even numbers with 0
 even_zero = np.where(matrix % 2 == 0, 0, matrix)
 print('Even numbers replaced with 0:\n', even_zero)
 ```
@@ -427,8 +423,7 @@ print('Even numbers replaced with 0:\n', even_zero)
 Try these image manipulation problems using NumPy and matplotlib:
 
 1. Load the grayscale image, transpose the array and display it.
-2. Load the grayscale image, find the index of the maximum pixel value.
-3. Load the grayscale image, move the top half of the image to the bottom half and the bottom half to the top half, and display the result.
+2. Load the grayscale image, move the top half of the image to the bottom half and the bottom half to the top half, and display the result.
 
 ## 10a. Solutions to Image Manipulation Practice Problems
 
@@ -448,11 +443,8 @@ plt.imshow(transposed, cmap='gray')
 plt.title('Transposed Grayscale Image')
 plt.show()
 
-# 2. Find the index of the maximum pixel value (2D pixel coordinate)
-max_idx = np.unravel_index(np.argmax(image), image.shape)  # (row, column)
-print('Index of maximum pixel value (row, column):', max_idx)
 
-# 3. Move the top half to the bottom and the bottom half to the top, then display
+# 2. Move the top half to the bottom and the bottom half to the top, then display
 h = image.shape[0] // 2
 swapped = image.copy()
 swapped[:h] = image[h:]
