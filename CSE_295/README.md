@@ -39,6 +39,11 @@ Recordings([1](https://youtu.be/gvNwoS1vJXw), [2](https://youtu.be/s0-CHQ77BQ8),
 [Code](./pointers/).
 [Slide](https://docs.google.com/presentation/d/18Qdg1KCIP5hVz9_Ze43DH58ZDhTDhfS8/edit?usp=sharing&ouid=117096245255767727845&rtpof=true&sd=true)
 
+
+### Lecture 20-21: Dynamic Memory Allocation
+
+[Reading Material](./dynamic_memory_allocation/README.md)
+
 ---
 
 ## Practice Problems
