@@ -33,6 +33,12 @@ Recordings([1](https://youtu.be/gvNwoS1vJXw), [2](https://youtu.be/s0-CHQ77BQ8),
 ### Lecture 13-16: Struct, Union, Enum, Bitfield 
 [Code](./structure_union_enum_bitfield/) 
 
+
+### Lecture 17-19: Pointers
+
+[Code](./pointers/).
+[Slide](https://docs.google.com/presentation/d/18Qdg1KCIP5hVz9_Ze43DH58ZDhTDhfS8/edit?usp=sharing&ouid=117096245255767727845&rtpof=true&sd=true)
+
 ---
 
 ## Practice Problems
