@@ -1,9 +1,5 @@
 # C File I/O — Practice Problems (No seek)
 
-Solve these with only sequential file I/O. Do not use fseek/ftell/rewind or any seek-related APIs. Prefer fgets/fputs for text and fread/fwrite for binary. Always check return values and handle errors.
-
-- Setup note: Use modes r, w, a, rb, wb, ab as appropriate. Use a buffer (e.g., 4–8 KB) for efficient copies.
-
 ## Warm-up
 1) Echo file: Read a text file and print it to stdout exactly.
 2) Copy text file: Copy source.txt to dest.txt (overwrite if exists). Keep identical content.
