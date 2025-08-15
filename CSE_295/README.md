@@ -51,3 +51,5 @@ Recordings([1](https://youtu.be/gvNwoS1vJXw), [2](https://youtu.be/s0-CHQ77BQ8),
 - [Conditional statements](./practice/conditional/README.md)
 - [Loop](./practice/loops/README.md)
 - [Struct, Union, Enum](./practice/structure_union_enum/README.md)
+- [Strings](./practice/string/README.md)
+- [File I/O](./practice/file_io/README.md)
