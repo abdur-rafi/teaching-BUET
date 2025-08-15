@@ -1,4 +1,4 @@
-# C File I/O — Practice Problems (No seek)
+# C File I/O — Practice Problems 
 
 ## Warm-up
 1) Echo file: Read a text file and print it to stdout exactly.
